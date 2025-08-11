@@ -1,5 +1,13 @@
+import Chat from '@/components/Chat'
+
 function App() {
-	return <div className='font-bold underline text-3xl'>app</div>
+	return (
+		<div className='max-w-lg shadow-md rounded-lg mt-20 mx-auto bg-white overflow-hidden'>
+			<div className='w-full max-w-lg shadow-md rounded-lg mx-auto bg-white overflow-hidden'>
+				<Chat />
+			</div>
+		</div>
+	)
 }
 
 export default App
