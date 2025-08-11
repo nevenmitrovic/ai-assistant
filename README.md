@@ -4,7 +4,7 @@ A modern, interactive AI chatbot application built with React, TypeScript, and V
 
 ## Live Demo
 
-Visit the production application: [example](https://ai-assistant-blond-two.vercel.app/)
+🚀 **[Visit the Live Application](https://ai-assistant-blond-two.vercel.app/)**
 
 ## Features
 
