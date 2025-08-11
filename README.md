@@ -1,69 +1,41 @@
-# React + TypeScript + Vite
+# AI Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive AI chatbot application built with React, TypeScript, and Vite. This application provides a clean and intuitive interface for users to interact with AI models through Hugging Face's Inference API.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit the production application: [example](https://ai-assistant-blond-two.vercel.app/)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-time Chat Interface**: UI with message history
+- **AI Integration**: Powered by Hugging Face's Mistral-7B-Instruct model
+- **Tech Stack**: Built with React 18, TypeScript, and Vite
+- **Design**: Styled with Tailwind CSS
+- **Auto-scroll**: Automatic scrolling to latest messages
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **AI Service**: Hugging Face Inference API
+- **Icons**: React Icons (Lucide)
+- **Linting**: ESLint with TypeScript support
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Usage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Start a conversation**: Type your message in the input field at the bottom
+2. **Send message**: Click the send button or press Enter
+3. **View AI response**: The AI will respond using the Mistral-7B-Instruct model
+4. **Continue chatting**: The conversation history is maintained throughout the session
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Configuration
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### AI Model Settings
+
+The application uses Hugging Face's Mistral-7B-Instruct model with the following default parameters:
+
+- **Model**: `mistralai/Mistral-7B-Instruct-v0.3`
+- **Max Tokens**: 250
+- **Temperature**: 0.7
